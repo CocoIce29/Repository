@@ -1,0 +1,152 @@
+<!-- Destructuring Array Example 
+    
+<html>
+    <head>
+        <title>
+            React html
+        </title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var my_array = ['apple', 'banana', 'orange']; 
+            var [item1, item2, item3] = my_array
+            alert(item2)
+        </script>
+    </body>
+</html> -->
+
+<!-- Destructuring Calculation Example
+    
+<html>
+    <head>
+        <title>
+            React html
+        </title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            function cal(a,b){
+                var add = a + b;
+                var sub = a - b;
+                return [add,sub];
+            }
+            var [add_1,sub_1] = cal(20,10)
+            alert(sub_1)
+        </script>
+    </body>
+</html> -->
+
+<!-- Destructuring Example
+    
+<html>
+    <head>
+        <title>
+            React html
+        </title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var my_obj = {
+                name : "xyzzzzz",
+                age : 20,
+                location : "Toronto", 
+            }
+            function my_str(my_object){
+                var ret_str = "My name is - " + my_object.name + " my age is - " + my_object.age
+                return ret_str
+            }
+            alert(my_str(my_obj))
+        </script>
+    </body>
+</html> -->
+
+<!-- Nested Destructuring Example
+    
+<html>
+    <head>
+        <title>
+            React html
+        </title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var my_obj = {
+                name : "xyzzzzz",
+                age : 20,
+                location : "Toronto", 
+                info : {
+                    grades : "A+",
+                    course : "FSWAD"
+                }
+            }
+            function my_str({name,age, info:{grades, course}}){
+                var ret_str = "My name is - " + name
+                            + " my age is - " + age
+                            + " and my grades are - " + grades
+                            +  " In the course - " + course;
+                return ret_str
+            }
+            alert(my_str(my_obj))
+        </script>
+    </body>
+</html> -->
+
+<!-- Spread Operator Example 
+    
+<html>
+    <head>
+        <title>
+            React html
+        </title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var my_arr1 = [1,2,3] 
+            var my_arr2 = [4,5,6]
+            var arr_comb = [...my_arr1, ...my_arr2]
+            alert(arr_comb[0])
+        </script>
+    </body>
+</html> -->
+
+<!-- Spread Operator Example 2
+    
+<html>
+    <head>
+        <title>
+            React html
+        </title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var my_arr1 = [1,2,3,4,6,7,8,9]
+            var [a,b,d,e,...c] = my_arr1
+            alert(c)
+        </script>
+    </body>
+</html> -->
+
