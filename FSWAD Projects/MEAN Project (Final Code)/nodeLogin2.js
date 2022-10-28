@@ -32,13 +32,23 @@ http.createServer(function (req, res) {
 
                     if(result==null){
                         console.log('User not found.');
+                        fs.readFile("ErrorPage.html", function(err, data) {
+                            if (err) {
+                                res.writeHead(500, { "Content-Type": "text/html" });
+                                res.end("<html><head><title>Error</title></head><body><h1>There was an error, please try again.</h1><a href='https://localhost:8000'></html>");
+                            }
+                            else {
+                                res.writeHead(200, { "Content-Type": "text/html" });
+                                res.end(data);
+                            }
+                        });
                     }
                     else {
                         console.log("User found!");
                         fs.readFile("HomePage.html", function(err, data) {
                             if (err) {
                                 res.writeHead(500, { "Content-Type": "text/html" });
-                                res.end("<html><head><title>Oops</title></head><body><h1>Oops, there was an error</h1></html>");
+                                res.end("<html><head><title>Error</title></head><body><h1>There was an error, please try again.</h1><a href='https://localhost:8000'></html>");
                             }
                             else {
                                 res.writeHead(200, { "Content-Type": "text/html" });
