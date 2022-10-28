@@ -15,7 +15,7 @@ http.createServer(function (req, res) {
         
         var Mongo = require('mongodb').MongoClient;
 
-        var url = "mongodb+srv://C_Allcroft29:Marauders29%3F@calmongodb.qbyvrif.mongodb.net/?retryWrites=true&w=majority";
+        var url = "";
 
         Mongo.connect(url, function(err, db) {
             if (err) throw err;
