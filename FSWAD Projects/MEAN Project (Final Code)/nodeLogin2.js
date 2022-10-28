@@ -1,9 +1,7 @@
 var http = require('http');
-const express = require('express');
 var fs = require('fs')
 const querystring = require('querystring')
 
-var app = express();
 
 http.createServer(function (req, res) {
     if (req.url == '/login') {
